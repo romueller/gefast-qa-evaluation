@@ -1,0 +1,1 @@
+gefast_dada2-s__lsr2;gefast;cons;analyses/model_supported_callahan/base_cons.conf;20;clusterer=cons-swarmer|refinement_threshold=1|refiner=cons-lsr|misc=light_opt:2

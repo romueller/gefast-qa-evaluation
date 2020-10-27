@@ -1,0 +1,1 @@
+vsearch__fast;vsearch;cluster_fast;;0.90:0.99:0.01;minsize=1

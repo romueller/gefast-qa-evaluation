@@ -1,0 +1,1 @@
+gefast_as__lss;gefast;as;analyses/model_supported_franzen/base_as.conf;20:200:20;refinement_threshold=1|refiner=cons-lss

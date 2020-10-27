@@ -1,0 +1,1 @@
+gefast_dada2-s__lss;gefast;cons;analyses/model_supported_franzen/base_cons.conf;20;clusterer=cons-swarmer|refinement_threshold=1|refiner=cons-lss

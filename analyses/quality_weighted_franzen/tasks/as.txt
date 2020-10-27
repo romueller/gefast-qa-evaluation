@@ -1,0 +1,1 @@
+gefast_as__nf;gefast;as;analyses/quality_weighted_franzen/base_as.conf;20:200:20;

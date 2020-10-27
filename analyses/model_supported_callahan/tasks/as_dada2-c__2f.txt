@@ -1,0 +1,1 @@
+gefast_as_dada2-c__2f;gefast;as;analyses/model_supported_callahan/base_as.conf;20:200:20;refinement_threshold=*2|clusterer=cons-classic

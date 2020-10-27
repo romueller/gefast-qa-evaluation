@@ -1,0 +1,1 @@
+gefast_qlev-ca__nf;gefast;qlev;analyses/quality_weighted_franzen/base_qlev.conf;1:10:1;distance=converge-a

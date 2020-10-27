@@ -1,0 +1,1 @@
+gefast_qas-mb__nf;gefast;qas;analyses/quality_weighted_franzen/base_qas.conf;20:200:20;distance=banded-score-malde-b

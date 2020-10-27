@@ -1,0 +1,1 @@
+gefast_lev_dada2-c__lsa2;gefast;lev;analyses/model_supported_franzen/base_lev.conf;1:10:1;refinement_threshold=1|clusterer=cons-classic|refiner=cons-lsa|misc=light_opt:2

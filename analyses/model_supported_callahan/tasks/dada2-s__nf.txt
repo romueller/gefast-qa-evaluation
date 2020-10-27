@@ -1,0 +1,1 @@
+gefast_dada2-s__nf;gefast;cons;analyses/model_supported_callahan/base_cons.conf;20;clusterer=cons-swarmer

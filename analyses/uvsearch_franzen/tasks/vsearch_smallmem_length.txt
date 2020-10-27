@@ -1,0 +1,1 @@
+vsearch__smallmem_length;vsearch;cluster_smallmem;;0.90:0.99:0.01;minsize=1|order=length
