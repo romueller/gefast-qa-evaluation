@@ -1,0 +1,2 @@
+gefast_qas-mb__muw;gefast;qas;analyses/performance/base_qas.conf;20:200:20;distance=banded-score-malde-b|misc=unweighted_matches:true$boosting_method:none
+gefast_qas-mb__v4_mult_20;gefast;qas;analyses/performance/base_qas.conf;20:200:20;distance=banded-score-malde-b|misc=unweighted_matches:true$inner_boost:false$boosting_method:mult$mult_factor:20

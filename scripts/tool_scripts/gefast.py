@@ -63,6 +63,10 @@ def run_gefast_str_args(binary, mode, in_file, config, threshold, out_file,
         op_uq = True
     op_amplicon_storage = util.get_value(args_string, 'amplicon_storage', args_sep)
 
+    op_representation = util.get_value(args_string, 'representation', args_sep)
+    op_ampl_coll = util.get_value(args_string, 'amplicon_collection', args_sep)
+    op_auxiliary = util.get_value(args_string, 'auxiliary', args_sep)
+
     run_gefast(binary, mode, in_file, config, threshold, out_file, refinement_threshold = refinement_threshold,
                clean = op_c, log_cmd = log_cmd, alphabet = op_alphabet, out_internal = op_out_i, out_statistics = op_out_s,
                out_seeds = op_out_w, out_uclust = op_out_u, break_swarms = op_n, boundary = op_boundary, mothur = op_m,
@@ -72,7 +76,8 @@ def run_gefast_str_args(binary, mode, in_file, config, threshold, out_file,
                mismatch_penalty = op_mismatch, gap_open_penalty = op_gap_open, gap_extend_penalty = op_gap_extend,
                keep_preprocessed = op_keep, misc = op_misc, list_file = op_l, num_extra_segments = op_num_segs, bands_per_side = op_bands,
                distance = op_distance, two_way_segment_filter = op_tw, use_score = op_us, use_qgrams = op_uq,
-               amplicon_storage = op_amplicon_storage)
+               amplicon_storage = op_amplicon_storage, representation = op_representation, amplicon_collection = op_ampl_coll,
+               auxiliary = op_auxiliary)
 
 
 # Run GeFaST and log time / memory.
@@ -82,7 +87,8 @@ def run_gefast(binary, mode, in_file, config, threshold, out_file, refinement_th
                min_abund = None, max_abund = None, separator = None, preprocessor = None, clusterer = None, refiner = None,
                output_generator = None, quality_encoding = None, match_reward = None, mismatch_penalty = None, gap_open_penalty = None,
                gap_extend_penalty = None, keep_preprocessed = None, misc = None, list_file = False, num_extra_segments = None, bands_per_side = None, distance = None,
-               two_way_segment_filter = False, use_score = False, use_qgrams = False, amplicon_storage = None):
+               two_way_segment_filter = False, use_score = False, use_qgrams = False, amplicon_storage = None, representation = None, amplicon_collection = None,
+               auxiliary = None):
     tmp_config = '%s_tmp_config' % out_file
     if config != '':
         ch.copy_config(config, tmp_config)
@@ -158,6 +164,12 @@ def run_gefast(binary, mode, in_file, config, threshold, out_file, refinement_th
         ch.add_to_config(tmp_config, 'use_qgrams', '1')
     if amplicon_storage is not None:
         ch.add_to_config(tmp_config, 'amplicon_storage', amplicon_storage)
+    if representation is not None:
+        ch.add_to_config(tmp_config, 'representation', representation)
+    if amplicon_collection is not None:
+        ch.add_to_config(tmp_config, 'amplicon_collection', amplicon_collection)
+    if auxiliary is not None:
+        ch.add_to_config(tmp_config, 'auxiliary', auxiliary)
 
     sp.call('%s %s %s %s %s %s' % (log_cmd, binary, mode, in_file, tmp_config, op_list_file), shell = True)
 
@@ -208,6 +220,9 @@ if __name__ == '__main__':
     argparser.add_argument('--use_score', action = 'store_true', help = 'GeFaST option: use scoring function')
     argparser.add_argument('--use_qgrams', action = 'store_true', help = 'GeFaST option: use q-gram filter')
     argparser.add_argument('--amplicon_storage', help = 'GeFaST option: select data structure for amplicon storage')
+    argparser.add_argument('--representation', help = 'GeFaST option: select data structure for feature representation')
+    argparser.add_argument('--amplicon_collection', help = 'GeFaST option: select data structure for amplicon collection')
+    argparser.add_argument('--auxiliary', help = 'GeFaST option: select data structure for auxiliary data')
     argparser.add_argument('--misc', help = 'GeFaST option: miscellaneous options')
 
     argparser.add_argument('-c', '--clean', action = 'store_true', help = 'remove output file')
@@ -228,4 +243,5 @@ if __name__ == '__main__':
                keep_preprocessed = args.keep_preprocessed, misc = args.misc, list_file = args.list_file,
                num_extra_segments = args.num_extra_segments, bands_per_side = args.bands_per_side,
                distance = args.distance, two_way_segment_filter = args.two_way_segment_filter, use_score = args.use_score,
-               use_qgrams = args.use_qgrams, amplicon_storage = args.amplicon_storage)
+               use_qgrams = args.use_qgrams, amplicon_storage = args.amplicon_storage, representation = args.representation,
+               amplicon_collection = args.amplicon_collection, auxiliary = args.auxiliary)

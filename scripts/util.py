@@ -8,9 +8,10 @@ import numpy as np
 DEF_GEFAST_PATH = 'GeFaST'
 DEF_USEARCH_PATH = 'usearch'
 DEF_VSEARCH_PATH = 'vsearch'
+DEF_SWARM_PATH = 'swarm'
 
 # default performance-logging command and the associated output file header
-DEF_LOG_CMD = '/usr/bin/time -f %%e;%%M;%%C -a -o %s' #TODO? add " around command column
+DEF_LOG_CMD = '/usr/bin/time -f "%%e;%%M;%%C" -a -o %s'
 DEF_LOG_HEADER = 'reads;task;tool;mode;threshold;time;memory;cmd'
 
 # argument separator of the 'misc' column in a task list

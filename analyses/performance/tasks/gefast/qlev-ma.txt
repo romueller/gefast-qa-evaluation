@@ -1,0 +1,2 @@
+gefast_qlev-ma__mw;gefast;qlev;analyses/performance/base_qlev.conf;1:10:1;distance=malde-a|misc=unweighted_matches:false$boosting_method:none
+gefast_qlev-ma__v3_mult_100;gefast;qlev;analyses/performance/base_qlev.conf;1:10:1;distance=malde-a|misc=unweighted_matches:false$inner_boost:false$boosting_method:mult$mult_factor:100

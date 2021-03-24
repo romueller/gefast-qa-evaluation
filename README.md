@@ -5,11 +5,13 @@ and presented in *On the use of sequence-quality information in OTU clustering* 
 GeFaST implements two groups of quality-aware methods.
 The *quality-weighted* methods involve alignments with quality-weighted cost functions,
 while the *model-supported* methods are inspired by DADA2's consistency model.
-The clustering quality of GeFaST is compared to DADA2, USEARCH and VSEARCH on two collections of data sets described in
+The clustering quality and performance of GeFaST is compared to DADA2, USEARCH, VSEARCH, UPARSE and Swarm on two collections of data sets described in
 [*DADA2: High-resolution sample inference from Illumina amplicon data*](https://doi.org/10.1038/nmeth.3869) (Callahan et al.) and
 [*Improved OTU-picking using long-read 16S rRNA gene amplicon sequencing and generic hierarchical clustering*](https://doi.org/10.1186/s40168-015-0105-6) (Franzén et al.).
 
 ## How to use it
+
+### Clustering quality
 
 The evaluation is two-staged.
 First, the different methods and tools were evaluated separately on the two collections of data sets.
@@ -22,13 +24,20 @@ The analyses expect them two be installed in the `tools/` folder but the paths c
 There are several starting points from which the evaluation can be repeated:
 1) The code in the `scripts/` folder and the files provided in the subfolders of `analyses/` 
 allow to repeat the analyses from scratch by following the workflow described in the respective notebook.
-2) The data preparation can be skipped by downloading the respective input files from [PUB](https://doi.org/10.4119/unibi/2946192)
+2) The data preparation can be skipped by downloading the respective input files from [PUB](https://pub.uni-bielefeld.de/record/2951742)
 and ignoring the corresponding workflow commands in the notebooks. 
 3) The actual evaluation of the clustering results can be rerun by using the aggregated information available as archived CSV files
-from [PUB](https://doi.org/10.4119/unibi/2946192).
+from [PUB](https://pub.uni-bielefeld.de/record/2951742).
+
+### Performance
+
+The runtime of GeFaST and the other tools is evaluated on the largest data set occurring in above quality evaluation (`hmp_single`).
+The workflow and the results are shown in the notebook `analyses/performance.ipynb`.
+The performance evaluation can be repeated using the same starting points described above for the clustering quality.
 
 ## Required software
- * [GeFaST](https://github.com/romueller/gefast) (version 2.0.0)
+ * [GeFaST](https://github.com/romueller/gefast) (version 2.0.1)
+ * [Swarm](https://github.com/torognes/swarm) (version 3.0.0)
  * [USEARCH](http://www.drive5.com/usearch/download.html) (version 11.0.667)
  * [VSEARCH](https://github.com/torognes/vsearch) (version 2.14.2)
  * [ART](https://www.niehs.nih.gov/research/resources/software/biostatistics/art/index.cfm) (`art_illumina`, VanillaIceCream release)

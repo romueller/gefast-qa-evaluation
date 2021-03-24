@@ -1,0 +1,2 @@
+gefast_qas-kb__muw;gefast;qas;analyses/performance/base_qas.conf;20:200:20;distance=banded-score-kim-b|misc=unweighted_matches:true$boosting_method:none
+gefast_qas-kb__v4_linear_20;gefast;qas;analyses/performance/base_qas.conf;20:200:20;distance=banded-score-kim-b|misc=unweighted_matches:true$inner_boost:false$boosting_method:linear$linear_levels:42$linear_start:20

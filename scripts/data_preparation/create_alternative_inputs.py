@@ -52,4 +52,4 @@ if __name__ == '__main__':
     if args.sortbysize:
         sort_criterion = 'size'
 
-    create_file(args.vsearch, args.in_file, args.out_file, args.derep, sort_criterion, args.minsize, args.old_sep, args.new_sep)
+    create_file(args.vsearch, args.in_file, args.out_file, args.dereplicate, sort_criterion, args.minsize, args.old_sep, args.new_sep)

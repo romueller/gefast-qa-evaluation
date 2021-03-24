@@ -1,0 +1,1 @@
+gefast_cons__lsr2;gefast;cons;analyses/performance/base_cons.conf;20;clusterer=cons-swarmer|refinement_threshold=1|refiner=cons-lsr|misc=light_opt:2
